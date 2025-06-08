@@ -13,16 +13,37 @@
 <body>
     <nav class="cabeza">
         <div class="div-header">
-            <div class="nav-1">
-                <img src="./recursos/vuelaya.png" alt="logo" class="logo">
-                <a href="#" class="tuviaje">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m6.115 5.19.319 1.913A6 6 0 0 0 8.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 0 0 2.288-4.042 1.087 1.087 0 0 0-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 0 1-.98-.314l-.295-.295a1.125 1.125 0 0 1 0-1.591l.13-.132a1.125 1.125 0 0 1 1.3-.21l.603.302a.809.809 0 0 0 1.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 0 0 1.528-1.732l.146-.292M6.115 5.19A9 9 0 1 0 17.18 4.64M6.115 5.19A8.965 8.965 0 0 1 12 3c1.929 0 3.716.607 5.18 1.64" />
-                    </svg>
-                    <span class="texto">Tu Viaje</span>
-                </a>
-            </div>
+        <div class="nav-1">
+            <a href="#" class="var-icon">
+            <img src="recursos/vuelayaa.png" alt="Logo" class="logo">
+            </a>
+
+        <div class="nav-izquierda">
+        <a href="#" class="var-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m6.115 5.19.319 1.913A6 6 0 0 0 8.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 0 0 2.288-4.042 1.087 1.087 0 0 0-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 0 1-.98-.314l-.295-.295a1.125 1.125 0 0 1 0-1.591l.13-.132a1.125 1.125 0 0 1 1.3-.21l.603.302a.809.809 0 0 0 1.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 0 0 1.528-1.732l.146-.292M6.115 5.19A9 9 0 1 0 17.18 4.64M6.115 5.19A8.965 8.965 0 0 1 12 3c1.929 0 3.716.607 5.18 1.64" />
+        </svg>
+        <span class="texto">Tu Viaje</span></a>
+        <a href="#" class="var-icon"><span class="texto">Aventurero</span></a>
         </div>
+
+        <div class="nav-derecha">
+        <a href="#" class="var-icon"><span class="texto">Hoteles</span></a>
+        <a href="#" class="var-icon"><span class="texto">Mapa</span></a>
+        <a href="#" class="var-icon"><span class="texto">Premium</span></a>
+        <a href="#" class="var-icon"><span class="texto">GoldCard</span></a>
+        <a href="#" class="var-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+        </svg>
+        <span class="texto">Iniciar Sesion</span></a>
+    </div>
+    </div>
     </nav>
+
+    <header class="intro">
+        <div class="introdiv">
+            <h2 class="introh2">Viaja rapido con solo un click</h2>
+            <h2 class="introh3">Ofertas de vuelo barato</h2>
+        </div>
+    </header>
 </body>
 </html>

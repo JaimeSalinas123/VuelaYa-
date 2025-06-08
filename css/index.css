@@ -1,6 +1,103 @@
 body {
+    margin: 0;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
-    font-weight: 400; 
-    line-height: 1.6; 
     background-color: #f8f9fa;
+}
+
+        nav.cabeza {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            padding: 45px 100px; 
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .div-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-1 {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        .nav-1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-left: 10px; /* espacio para el logo */
+        }
+
+        .nav-izquierda,
+        .nav-derecha {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        }
+
+/* Si necesitas mover más a la derecha los elementos izquierdo */
+        .nav-izquierda {
+        margin-left: -650px;
+        }
+
+
+        .logo {
+            position: absolute;
+            top: 0px;
+            left: 80px;
+            height: 110px;
+            margin-right: 40px;
+        }
+
+        .var-icon {
+            display: flex;
+            align-items: center;
+            color: #000;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 17px; /* Texto un poco más grande */
+            transition: color 0.3s ease;
+        }
+
+        .var-icon:hover {
+            color: #007bff;
+        }
+
+        .var-icon svg {
+            height: 24px; /* Ícono más grande */
+            margin-right: 6px;
+        }
+
+        .texto {
+            white-space: nowrap;
+        }
+
+        .intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; /* puedes ajustar el alto según tu diseño */
+    margin-top: 100px; /* separación desde el navbar */
+}
+
+.introh2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333; /* cambia el color si lo necesitas */
+    text-align: center;
+}
+
+.introh3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333; 
+    text-align: center;
+    margin-top: -30px;
 }
