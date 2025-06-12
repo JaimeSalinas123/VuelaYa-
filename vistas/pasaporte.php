@@ -8,8 +8,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/pasaporte.css">
-<script defer src="./scripts/"></script>
-<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="../scripts/pasaporte.js"></script>
+<link href="https://cdn.tailwindcss.com" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+<script src="https://unpkg.com/canvas2image@1.0.5/canvas2image.js"></script>
+<script src="https://unpkg.com/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
 
 <body>
@@ -42,7 +50,53 @@
     </div>
     </nav>
 
-    
+    <!-- Contenido del pasaporte online -->
+    <header class="bg-blue-600 text-white text-center py-5">
+    <h1 class="text-3xl font-bold"><i class="fas fa-passport mr-2"></i> Pasaporte Online</h1>
+</header>
+    <!-- Mapa del Mundo (estático) -->
+    <div id="map" class="h-[400px] w-[90%] mx-auto my-5 border-2 border-gray-800 rounded-lg"></div>
+
+    <!-- Formulario para agregar país -->
+    <div class="bg-white p-5 rounded-lg shadow-md max-w-2xl mx-auto my-5">
+        <h2 class="text-2xl font-bold mb-4">Agregar País Visitado</h2>
+        <div class="mb-4">
+            <label for="country" class="block font-bold mb-2">País:</label>
+            <select id="country" class="w-full p-2 border border-gray-300 rounded">
+                <option value="Mexico">México</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Spain">España</option>
+                <option value="France">Francia</option>
+                <option value="Japan">Japón</option>
+            </select>
+        </div>
+        <div class="mb-4">
+            <label for="date" class="block font-bold mb-2">Fecha de visita:</label>
+            <input type="date" id="date" class="w-full p-2 border border-gray-300 rounded">
+        </div>
+        <div class="mb-4">
+            <label for="description" class="block font-bold mb-2">Descripción:</label>
+            <textarea id="description" rows="3" class="w-full p-2 border border-gray-300 rounded" placeholder="¡Fue increíble!"></textarea>
+        </div>
+        <div class="mb-4">
+            <label for="photos" class="block font-bold mb-2">Fotos:</label>
+            <input type="file" id="photos" accept="image/*" multiple class="w-full p-2 border border-gray-300 rounded">
+            <div id="photos-preview" class="flex flex-wrap gap-2 mt-2"></div>
+        </div>
+        <button id="save-btn" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-gray-900">
+            <i class="fas fa-save mr-2"></i> Guardar
+        </button>
+    </div>
+
+<div class="max-w-4xl mx-auto my-5 bg-white p-5 rounded-lg shadow-md">
+    <div class="flex justify-between items-center mb-4">
+        <h2 class="text-2xl font-bold">Mis Viajes</h2>
+        <button id="download-pdf" class="bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700 flex items-center">
+            <i class="fas fa-file-pdf mr-2"></i> Descargar Pasaporte
+        </button>
+    </div>
+    <div id="visited-countries" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+</div>
 
 <footer class="footer">
     <div class="footer-container">
@@ -108,6 +162,7 @@
         </div>
     </div>
 </footer>
+</body>
 
 </body>
 </html>

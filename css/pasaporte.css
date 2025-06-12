@@ -69,7 +69,7 @@ nav.cabeza {
 }
 
 .footer {
-    background-color: #007bff;
+    background-color: #007bff; /* Color azul original */
     color: white;
     padding: 50px 0;
     font-family: 'Roboto', sans-serif;
@@ -117,6 +117,7 @@ nav.cabeza {
 
 .contacto-btn:hover {
     opacity: 0.9;
+    transform: translateY(-2px);
 }
 
 .enlaces h3, .redes h3 {
@@ -172,4 +173,89 @@ nav.cabeza {
 
 .red-social span {
     font-size: 15px;
+}
+
+
+#photos-preview img {
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+#visited-countries {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.country-card {
+    border: 2px solid #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.country-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.country-name {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+}
+
+
+.country-date {
+    color: #4a5568;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.country-description {
+    margin-bottom: 1.5rem;
+    color: #4a5568;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.country-photo {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.country-photo:hover {
+    transform: scale(1.05);
+}
+
+
+.delete-btn {
+    margin-top: 1.5rem;
+    color: white;
+    background-color: #e53e3e;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #c53030;
 }
