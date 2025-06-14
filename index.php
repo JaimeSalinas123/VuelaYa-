@@ -25,12 +25,12 @@
         </svg>
         <span class="texto">Inicio</span></a>
         <a href="./vistas/pasaporte.php" class="var-icon"><span class="texto">Pasaporte Online</span></a>
-        <a href="#" class="var-icon"><span class="texto">Contactanos</span></a>
+        <a href="./vistas/contacto.php" class="var-icon"><span class="texto">Contactanos</span></a>
         </div>
 
         <div class="nav-derecha">
         <a href="#" class="var-icon"><span class="texto">Buscar Vuelos</span></a>
-        <a href="#" class="var-icon"><span class="texto">Hoteles</span></a>
+        <a href="./vistas/hoteles.php" class="var-icon"><span class="texto">Hoteles</span></a>
         <a href="#" class="var-icon"><span class="texto">Recomendaciones</span></a>
         <a href="#" class="var-icon"><span class="texto">GoldCard</span></a>
         <a href="#" class="var-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">

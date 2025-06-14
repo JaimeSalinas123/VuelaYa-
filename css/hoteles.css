@@ -1,0 +1,250 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+}
+
+nav.cabeza {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    padding: 45px 100px; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.div-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 180px;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.nav-izquierda,
+.nav-derecha {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.nav-izquierda {
+    margin-left: -550px;
+}
+
+.logo {
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    height: 110px;
+    margin-right: 50px;
+}
+
+.var-icon {
+    display: flex;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+    transition: color 0.3s ease;
+}
+
+.var-icon:hover {
+    color: #007bff;
+}
+
+.var-icon svg {
+    height: 24px;
+    margin-right: 6px;
+}
+
+.footer {
+    background-color: #007bff;
+    color: white;
+    padding: 50px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-section:last-child {
+    border-right: none;
+}
+
+.contacto-info {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.contacto-info p {
+    margin: 0 0 10px 0;
+}
+
+.contacto-btn {
+    background-color: white;
+    color: #007bff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.contacto-btn:hover {
+    opacity: 0.9;
+}
+
+.enlaces h3, .redes h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.enlaces ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.enlaces li {
+    margin-bottom: 12px;
+}
+
+.enlaces a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.enlaces a:hover {
+    text-decoration: underline;
+}
+
+.redes-sociales {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.red-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.red-social:hover {
+    opacity: 0.8;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+
+.red-social span {
+    font-size: 15px;
+}
+
+
+.hoteles {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.hoteles.caja {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hotelesh2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.hotelesh2 p {
+    color: #007bff;
+    display: block;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.busquedarapida {
+    text-align: center;
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.continents-list {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 8px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+.continents-container {
+    list-style-type: none;
+    padding: 0;
+    margin: 5px;
+    display: flex;
+    gap: 5px;
+}
+
+.continent-item {
+    padding: 8px 16px;
+    transition: all 0.25s ease;
+    border-radius: 4px;
+}
+
+.continent-item a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    display: block;
+}
+
+.continent-item:hover {
+    background-color: #f0f6ff;
+}
+
+.continent-item:hover a {
+    color: #0066cc;
+}

@@ -7,17 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/pasaporte.css">
-<script defer src="../scripts/pasaporte.js"></script>
-<link href="https://cdn.tailwindcss.com" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
-<script src="https://unpkg.com/canvas2image@1.0.5/canvas2image.js"></script>
-<script src="https://unpkg.com/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+<link rel="stylesheet" href="../css/contacto.css">
+<script defer src="./scripts/index.js"></script>
 </head>
 
 <body>
@@ -33,8 +26,8 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="m6.115 5.19.319 1.913A6 6 0 0 0 8.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 0 0 2.288-4.042 1.087 1.087 0 0 0-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 0 1-.98-.314l-.295-.295a1.125 1.125 0 0 1 0-1.591l.13-.132a1.125 1.125 0 0 1 1.3-.21l.603.302a.809.809 0 0 0 1.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 0 0 1.528-1.732l.146-.292M6.115 5.19A9 9 0 1 0 17.18 4.64M6.115 5.19A8.965 8.965 0 0 1 12 3c1.929 0 3.716.607 5.18 1.64" />
         </svg>
         <span class="texto">Inicio</span></a>
-        <a href="#" class="var-icon"><span class="texto">Pasaporte Online</span></a>
-        <a href="contacto.php" class="var-icon"><span class="texto">Contactanos</span></a>
+        <a href="pasaporte.php" class="var-icon"><span class="texto">Pasaporte Online</span></a>
+        <a href="#" class="var-icon"><span class="texto">Contactanos</span></a>
         </div>
 
         <div class="nav-derecha">
@@ -50,53 +43,65 @@
     </div>
     </nav>
 
-    <!-- Contenido del pasaporte online -->
-    <header class="bg-blue-600 text-white text-center py-5">
-    <h1 class="text-3xl font-bold"><i class="fas fa-passport mr-2"></i> Pasaporte Online</h1>
+    <header class="contacto bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="contactodiv max-w-2xl mx-auto bg-white rounded-xl shadow-md overflow-hidden p-6 sm:p-8">
+        <h2 class="contactoh2 text-3xl font-bold text-center text-gray-800 mb-8">Contáctanos</h2>
+        
+        <div class="cajacontacto space-y-6">
+            <div>
+                <label for="email-address-icon" class="block mb-2 text-sm font-medium text-gray-700">Tu correo electrónico</label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+                            <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
+                            <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
+                        </svg>
+                    </div>
+                    <input type="text" id="email-address-icon" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="tu@email.com">
+                </div>
+            </div>
+
+            <div>
+                <label for="countries" class="block mb-2 text-sm font-medium text-gray-700">Selecciona tu problema</label>
+                <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <option selected disabled>Elige una opción</option>
+                    <option>Boleto</option>
+                    <option>Tarjeta</option>
+                    <option>Hoteles</option>
+                    <option>Inicio de sesión</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+            
+            <div>
+                <label for="message" class="block mb-2 text-sm font-medium text-gray-700">Tu mensaje</label>
+                <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Describe tu problema o consulta..."></textarea>
+            </div>
+
+            <div>
+                <label class="block mb-2 text-sm font-medium text-gray-700" for="user_avatar">Subir archivo</label>
+                <div class="flex items-center justify-center w-full">
+                    <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
+                        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                            <svg class="w-8 h-8 mb-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                            </svg>
+                            <p class="mb-2 text-sm text-gray-500"><span class="font-semibold">Click para subir</span> o arrastra y suelta</p>
+                            <p class="text-xs text-gray-500">PNG, JPG, PDF (MAX. 5MB)</p>
+                        </div>
+                        <input id="dropzone-file" type="file" class="hidden" />
+                    </label>
+                </div> 
+            </div>
+            
+            <div class="pt-4">
+                <button type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center shadow-lg transition-all duration-300 ease-in-out transform hover:scale-[1.02]">
+                    Enviar mensaje
+                </button>
+            </div>
+        </div>
+    </div>
 </header>
-    <!-- Mapa del Mundo (estático) -->
-    <div id="map" class="h-[400px] w-[90%] mx-auto my-5 border-2 border-gray-800 rounded-lg"></div>
-
-    <!-- Formulario para agregar país -->
-    <div class="bg-white p-5 rounded-lg shadow-md max-w-2xl mx-auto my-5">
-        <h2 class="text-2xl font-bold mb-4">Agregar País Visitado</h2>
-        <div class="mb-4">
-            <label for="country" class="block font-bold mb-2">País:</label>
-            <select id="country" class="w-full p-2 border border-gray-300 rounded">
-                <option value="Mexico">México</option>
-                <option value="Argentina">Argentina</option>
-                <option value="Spain">España</option>
-                <option value="France">Francia</option>
-                <option value="Japan">Japón</option>
-            </select>
-        </div>
-        <div class="mb-4">
-            <label for="date" class="block font-bold mb-2">Fecha de visita:</label>
-            <input type="date" id="date" class="w-full p-2 border border-gray-300 rounded">
-        </div>
-        <div class="mb-4">
-            <label for="description" class="block font-bold mb-2">Descripción:</label>
-            <textarea id="description" rows="3" class="w-full p-2 border border-gray-300 rounded" placeholder="¡Fue increíble!"></textarea>
-        </div>
-        <div class="mb-4">
-            <label for="photos" class="block font-bold mb-2">Fotos:</label>
-            <input type="file" id="photos" accept="image/*" multiple class="w-full p-2 border border-gray-300 rounded">
-            <div id="photos-preview" class="flex flex-wrap gap-2 mt-2"></div>
-        </div>
-        <button id="save-btn" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-gray-900">
-            <i class="fas fa-save mr-2"></i> Guardar
-        </button>
-    </div>
-
-<div class="max-w-4xl mx-auto my-5 bg-white p-5 rounded-lg shadow-md">
-    <div class="flex justify-between items-center mb-4">
-        <h2 class="text-2xl font-bold">Mis Viajes</h2>
-        <button id="download-pdf" class="bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700 flex items-center">
-            <i class="fas fa-file-pdf mr-2"></i> Descargar Pasaporte
-        </button>
-    </div>
-    <div id="visited-countries" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
-</div>
 
 <footer class="footer">
     <div class="footer-container">
@@ -162,7 +167,6 @@
         </div>
     </div>
 </footer>
-</body>
 
 </body>
 </html>
